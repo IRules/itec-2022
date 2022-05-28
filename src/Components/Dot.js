@@ -4,7 +4,7 @@ import './Dot.css';
 import AdjustIcon from '@mui/icons-material/Adjust';
 
 function Dot(props) {
-  const booked = true;
+  const booked = false;
   const [anchor, setAnchor] = React.useState(null);
   const open = Boolean(anchor);
   const handleClick = (event) => {
@@ -53,16 +53,6 @@ function Dot(props) {
         >
           <br></br>
           &#160;&#160;
-          <TextField
-            id="date"
-            label="Book from"
-            type="date"
-            defaultValue="2022-05-29"
-            InputLabelProps={{
-              shrink: true,
-            }}
-          />
-          &#160;
           <TextField
             id="date"
             label="Book till"

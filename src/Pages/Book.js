@@ -155,12 +155,12 @@ function Book() {
             src="https://firebasestorage.googleapis.com/v0/b/itec-2022.appspot.com/o/demo1.png?alt=media&token=dab00570-5595-46cd-afc2-8ca8389b346a"
           ></img>
           {dots}
-          {/* <Dot
+          <Dot
             className="book__mapBureausDots"
             x="-27%"
             y="-100%"
             color="#DE3F1F"
-          /> */}
+          />
         </div>
       </div>
     </div>

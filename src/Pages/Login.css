@@ -1,7 +1,8 @@
 
     .Login {
         overflow: hidden;
-        background-image: url("https://1d59b73swr1f1swu2v451xcx-wpengine.netdna-ssl.com/wp-content/uploads/2016/10/Plants_Danny_Strutt-2160x1409.png");
+        background-image: url("https://media.discordapp.net/attachments/814103103150358568/980211913134862406/loginbackground.jpg");
+        background-size: cover;
         width: 100vw;
         height: 100vh;
       }
