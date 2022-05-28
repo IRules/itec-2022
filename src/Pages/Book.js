@@ -19,7 +19,15 @@ function Book() {
 
   let offices = [];
   let floors = [];
-  let bureaus = [];
+  let bureaus = [
+    {
+      name: 'bureau-1',
+      booked: true,
+      bookedBy: 'irulesmain@gmail.com',
+      x: '-27%',
+      y: '-100%',
+    },
+  ];
 
   const handleClick = (event) => {
     setAnchor(event.currentTarget);
@@ -157,9 +165,34 @@ function Book() {
           {dots}
           <Dot
             className="book__mapBureausDots"
-            x="-27%"
-            y="-100%"
+            x="-34%"
+            y="-107%"
             color="#DE3F1F"
+          />
+          <Dot
+            className="book__mapBureausDots"
+            x="-3%"
+            y="-107%"
+            color="#DE3F1F"
+          />
+          <Dot
+            className="book__mapBureausDots"
+            x="-3%"
+            y="-107%"
+            color="#DE3F1F"
+          />
+          <Dot
+            className="book__mapBureausDots"
+            x="-3%"
+            y="-107%"
+            color="#DE3F1F"
+          />
+          <Dot
+            className="book__mapBureausDots"
+            x="-32%"
+            y="-70%"
+            color="#DE3F1F"
+            name="Bureau-1"
           />
         </div>
       </div>

@@ -18,3 +18,8 @@
 .headerUser {
     margin-right: 1vw;
 }
+
+.drawer {
+    height: 100vh;
+    width: 250px;
+}

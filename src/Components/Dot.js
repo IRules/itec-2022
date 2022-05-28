@@ -51,8 +51,16 @@ function Dot(props) {
             'aria-labelledby': 'basic-button',
           }}
         >
+          <MenuItem
+            sx={{
+              display: 'flex',
+              allignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            {props.name}
+          </MenuItem>
           <br></br>
-          &#160;&#160;
           <TextField
             id="date"
             label="Book till"
@@ -62,7 +70,7 @@ function Dot(props) {
               shrink: true,
             }}
           />
-          &#160;&#160;
+          <br></br>
           <MenuItem
             sx={{
               display: 'flex',
