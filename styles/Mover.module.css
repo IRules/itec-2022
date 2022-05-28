@@ -1,0 +1,28 @@
+.mover {
+    position: fixed;
+    margin-left: 90vw;
+    margin-top: 70vh;
+    background-color: white;
+    height: 150px;
+    width: 150px;
+    border-radius: 100px;
+}
+
+.mover__up {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mover__middle   {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.mover__down {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

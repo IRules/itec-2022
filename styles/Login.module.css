@@ -1,0 +1,37 @@
+
+    .Login {
+      overflow: hidden;
+      background-image: url("https://1d59b73swr1f1swu2v451xcx-wpengine.netdna-ssl.com/wp-content/uploads/2016/10/Plants_Danny_Strutt-2160x1409.png");
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .login__stripe {
+      display: flex;
+      background-color: #fff;
+      width: 400px;
+      height: 100vh;
+      margin-left: 10%;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .login__stripeForm {
+      display: block;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login__stripeForm > fieldset {
+      border-width: 3px !important;
+      overflow: hidden;
+      min-width: 0%;
+      border-color: rgb(255 0 0 / 23%) !important;
+    }
+    
+    .MuiOutlinedInput-root > fieldset {
+      border-width: 3px !important;
+      overflow: hidden;
+      min-width: 0%;
+      border-color: rgb(255 0 0 / 23%) !important;
+    }
