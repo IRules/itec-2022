@@ -1,0 +1,20 @@
+.header {
+    background-color: aliceblue;
+    width: 100vw;
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.headerRight {
+
+}
+
+.headerDivider {
+    width: 72%;
+}
+
+.headerUser {
+    margin-right: 1vw;
+}

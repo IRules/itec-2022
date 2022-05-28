@@ -1,0 +1,50 @@
+.book {
+    height: 94vh;
+    width: 100vw;
+    background-color: #f4f4ef;
+    display: flex;
+    align-items: center;
+    gap: 30%;
+}
+
+.book__nav {
+    height: 100%;
+    width: 11vw;
+    background-color: aliceblue;
+    display: block;
+}
+
+.book__navButton {
+    margin-top: 10px;
+    width: 175px;
+    height: 45px;
+}
+
+.book__nav > button {
+    color: black;
+    font-weight: 700;
+    font-size: 15px;
+    text-align: left;
+}
+
+.book__navDivider
+
+.book__map {
+    display: flex;
+    height: 100%;
+    width: 89vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.book__mapBureaus {
+    position: relative;
+}
+
+.book__mapBureausDots {
+	position: absolute;
+}
+
+.book__mapBureausImg {
+    position: static;
+}
