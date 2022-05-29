@@ -7,8 +7,8 @@ import Dot from '../Components/Dot';
 import { db } from '../firebase';
 function Book() {
   const [dots, setDots] = useState();
-  const [office, setOffice] = useState('Select Office');
-  const [floor, setFloor] = useState('Select Floor');
+  const [office, setOffice] = useState('Select');
+  const [floor, setFloor] = useState('Select');
   const [anchor, setAnchor] = React.useState(null);
   const [anchor2, setAnchor2] = React.useState(null);
   const open = Boolean(anchor);
@@ -19,15 +19,7 @@ function Book() {
 
   let offices = [];
   let floors = [];
-  let bureaus = [
-    {
-      name: 'bureau-1',
-      booked: true,
-      bookedBy: 'irulesmain@gmail.com',
-      x: '-27%',
-      y: '-100%',
-    },
-  ];
+  let bureaus = [];
 
   const handleClick = (event) => {
     setAnchor(event.currentTarget);
@@ -75,26 +67,24 @@ function Book() {
     setFloor(floor);
     bureaus.length = 0;
     console.log(floor);
-    setTimeout(() => {
-      db.collection('locations')
-        .doc(office)
-        .collection('floors')
-        .doc(floor)
-        .collection('bureaus')
-        .get()
-        .then((querySnapshot) => {
-          querySnapshot.forEach((doc) => {
-            bureaus.push({
-              name: doc.id,
-              x: doc.data().x,
-              y: doc.data().y,
-              booked: doc.data().booked,
-              bookedBy: doc.data().bookedBy,
-              bookedTill: doc.data().bookedTill,
-            });
+    db.collection('locations')
+      .doc(office)
+      .collection('floors')
+      .doc(floor)
+      .collection('bureaus')
+      .get()
+      .then((query) => {
+        query.forEach((doc) => {
+          bureaus.push({
+            name: doc.id,
+            booked: doc.data().booked,
+            bookedBy: doc.data().bookedBy,
+            bookedTill: doc.data().bookedTill,
+            x: doc.data().x,
+            y: doc.data().y,
           });
         });
-    }, 5500);
+      });
     console.log(bureaus);
   };
 
@@ -141,7 +131,7 @@ function Book() {
 
         <Button className="book__navButton" onClick={handleClick2}>
           <ReorderIcon />
-          &#160; {floor}
+          &#160; Floor: {floor}
         </Button>
         <Menu
           id="floor-menu"
@@ -162,38 +152,98 @@ function Book() {
             alt="Office Map"
             src="https://firebasestorage.googleapis.com/v0/b/itec-2022.appspot.com/o/demo1.png?alt=media&token=dab00570-5595-46cd-afc2-8ca8389b346a"
           ></img>
-          {dots}
-          <Dot
-            className="book__mapBureausDots"
-            x="-34%"
-            y="-107%"
-            color="#DE3F1F"
-          />
-          <Dot
-            className="book__mapBureausDots"
-            x="-3%"
-            y="-107%"
-            color="#DE3F1F"
-          />
-          <Dot
-            className="book__mapBureausDots"
-            x="-3%"
-            y="-107%"
-            color="#DE3F1F"
-          />
-          <Dot
-            className="book__mapBureausDots"
-            x="-3%"
-            y="-107%"
-            color="#DE3F1F"
-          />
-          <Dot
-            className="book__mapBureausDots"
-            x="-32%"
-            y="-70%"
-            color="#DE3F1F"
-            name="Bureau-1"
-          />
+          {/* <div className="book__mapBureausDots">
+            <Dot
+              className="book__mapBureausDots"
+              x="630%"
+              y="-800%"
+              color="#DE3F1F"
+              name="bureau-1"
+              loc={office}
+              floor={floor}
+            />
+          </div> */}
+          ;
+          {bureaus.map(({ booked, bookedBy, bookedTill, x, y }, i) => {
+            <div className="book__mapBureausDots">
+              <Dot
+                className="book__mapBureausDots"
+                x="630%"
+                y="-800%"
+                color="#DE3F1F"
+                name="bureau-1"
+                loc={office}
+                floor={floor}
+              />
+            </div>;
+          })}
+          <div className="book__mapBureausDots">
+            <Dot
+              className="book__mapBureausDots"
+              x="530%"
+              y="-800%"
+              color="#DE3F1F"
+              name="bureau-2"
+              loc={office}
+              floor={floor}
+            />
+          </div>
+          <div className="book__mapBureausDots">
+            <Dot
+              className="book__mapBureausDots"
+              x="430%"
+              y="-800%"
+              color="#DE3F1F"
+              name="bureau-3"
+              loc={office}
+              floor={floor}
+            />
+          </div>
+          <div className="book__mapBureausDots">
+            <Dot
+              className="book__mapBureausDots"
+              x="300%"
+              y="-800%"
+              color="#DE3F1F"
+              name="Bureau-4"
+            />
+          </div>
+          <div className="book__mapBureausDots">
+            <Dot
+              className="book__mapBureausDots"
+              x="300%"
+              y="-550%"
+              color="#DE3F1F"
+              name="Bureau-5"
+            />
+          </div>
+          <div className="book__mapBureausDots">
+            <Dot
+              className="book__mapBureausDots"
+              x="430%"
+              y="-550%"
+              color="#DE3F1F"
+              name="Bureau-6"
+            />
+          </div>
+          <div className="book__mapBureausDots">
+            <Dot
+              className="book__mapBureausDots"
+              x="530%"
+              y="-550%"
+              color="#DE3F1F"
+              name="Bureau-7"
+            />
+          </div>
+          <div className="book__mapBureausDots">
+            <Dot
+              className="book__mapBureausDots"
+              x="630%"
+              y="-550%"
+              color="#DE3F1F"
+              name="Bureau-8"
+            />
+          </div>
         </div>
       </div>
     </div>
