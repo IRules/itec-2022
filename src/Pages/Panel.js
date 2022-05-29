@@ -8,6 +8,7 @@ import { auth } from '../firebase';
 import Book from './Book';
 import Manage from './Manage';
 import Analytics from './Analytics';
+import Navbar from '../Components/Navbar';
 
 function Panel() {
   const [window, setWindow] = useState('book');

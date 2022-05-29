@@ -1,0 +1,98 @@
+.book {
+    height: 94vh;
+    width: 100vw;
+    background-color: #f4f4ef;
+    display: flex;
+    align-items: center;
+    gap: 30%;
+}
+
+.book__nav {
+    height: 100%;
+    width: 11vw;
+    background-color: aliceblue;
+    display: block;
+}
+
+.book__navButton {
+    margin-top: 10px;
+    width: 175px;
+    height: 45px;
+}
+
+.book__nav > button {
+    color: black;
+    font-weight: 700;
+    font-size: 15px;
+    text-align: left;
+}
+
+.book__navDivider
+
+.book__map {
+    display: flex;
+    height: 100%;
+    width: 30vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.book__mapBureaus {
+    position: relative;
+}
+
+.book__mapBureausDots {
+	position: absolute;
+}
+
+.book__mapBureausImg {
+    position: static;
+}
+
+.mover {
+    position: fixed;
+    margin-left: 90vw;
+    margin-top: 70vh;
+    background-color: white;
+    height: 150px;
+    width: 150px;
+    border-radius: 100px;
+}
+
+.mover__up {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mover__middle   {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.mover__down {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.breadcrumbs {
+    position: fixed;
+    margin-left: 13vw;
+    margin-top: -80vh;
+    height: 70px;
+    width: 250px;
+    border-radius: 100px;
+}
+
+.options {
+    position: fixed;
+    margin-left: 13vw;
+    margin-top: 57vh;
+    background-color: white;
+    height: 300px;
+    width: 150px;
+    border-radius: 35px;
+}

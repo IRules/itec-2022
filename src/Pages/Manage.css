@@ -92,7 +92,10 @@
     margin-left: 13vw;
     margin-top: 57vh;
     background-color: white;
-    height: 300px;
+    height: 100px;
     width: 150px;
-    border-radius: 35px;
+}
+
+.options__name {
+    margin-top: 20px;
 }

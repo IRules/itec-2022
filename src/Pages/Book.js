@@ -170,7 +170,7 @@ function Book() {
             alt="Office Map"
             src="https://firebasestorage.googleapis.com/v0/b/itec-2022.appspot.com/o/demo1.png?alt=media&token=dab00570-5595-46cd-afc2-8ca8389b346a"
           ></img>
-          {/* <div className="book__mapBureausDots">
+          <div className="book__mapBureausDots">
             <Dot
               className="book__mapBureausDots"
               x="630%"
@@ -180,21 +180,8 @@ function Book() {
               loc={office}
               floor={floor}
             />
-          </div> */}
-          ;
-          {bureaus.map(({ booked, bookedBy, bookedTill, x, y }, i) => {
-            <div className="book__mapBureausDots">
-              <Dot
-                className="book__mapBureausDots"
-                x="630%"
-                y="-800%"
-                color="#DE3F1F"
-                name="bureau-1"
-                loc={office}
-                floor={floor}
-              />
-            </div>;
-          })}
+          </div>
+
           <div className="book__mapBureausDots">
             <Dot
               className="book__mapBureausDots"
@@ -223,7 +210,9 @@ function Book() {
               x="300%"
               y="-800%"
               color="#DE3F1F"
-              name="Bureau-4"
+              name="bureau-4"
+              loc={office}
+              floor={floor}
             />
           </div>
           <div className="book__mapBureausDots">
@@ -232,7 +221,9 @@ function Book() {
               x="300%"
               y="-550%"
               color="#DE3F1F"
-              name="Bureau-5"
+              name="bureau-5"
+              loc={office}
+              floor={floor}
             />
           </div>
           <div className="book__mapBureausDots">
@@ -241,7 +232,9 @@ function Book() {
               x="430%"
               y="-550%"
               color="#DE3F1F"
-              name="Bureau-6"
+              name="6ureau-6"
+              loc={office}
+              floor={floor}
             />
           </div>
           <div className="book__mapBureausDots">
@@ -250,7 +243,9 @@ function Book() {
               x="530%"
               y="-550%"
               color="#DE3F1F"
-              name="Bureau-7"
+              name="bureau-7"
+              loc={office}
+              floor={floor}
             />
           </div>
           <div className="book__mapBureausDots">
@@ -259,7 +254,9 @@ function Book() {
               x="630%"
               y="-550%"
               color="#DE3F1F"
-              name="Bureau-8"
+              name="bureau-8"
+              loc={office}
+              floor={floor}
             />
           </div>
         </div>

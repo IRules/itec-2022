@@ -5,6 +5,7 @@ import {
   Link,
   Menu,
   MenuItem,
+  TextField,
   Typography,
 } from '@mui/material';
 import React, { useEffect, useState } from 'react';
@@ -18,8 +19,10 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import SaveAltIcon from '@mui/icons-material/SaveAlt';
 import Dot from '../Components/Dot';
 import './Manage.css';
+import { db } from '../firebase';
 
 function Manage() {
+  const [value, setValue] = useState();
   const [locations, setLocations] = useState([]);
   const [office, setOffice] = useState('Select Office');
   const [floor, setFloor] = useState('Select Floor');
@@ -44,19 +47,37 @@ function Manage() {
   };
 
   const moveUp = () => {
-    setY(yAxis - 7);
+    setY(yAxis - 9);
   };
   const moveLeft = () => {
-    setX(xAxis - 7);
+    setX(xAxis - 9);
   };
   const moveRight = () => {
-    setX(xAxis + 7);
+    setX(xAxis + 9);
   };
   const moveDown = () => {
-    setY(yAxis + 7);
+    setY(yAxis + 9);
   };
 
-  const handleSave = () => {};
+  const handleSave = () => {
+    db.collection('locations')
+      .doc('Timisoara')
+      .collection('floors')
+      .doc('1')
+      .collection('bureaus')
+      .doc(value)
+      .set({
+        booked: false,
+        bookedBy: '',
+        bookedTill: '',
+        x: xAxis,
+        y: yAxis,
+      });
+
+    console.log(xAxis);
+    console.log(yAxis);
+    console.log(value);
+  };
 
   //   useEffect(() => {
   //     const listener = (event) => {
@@ -71,6 +92,10 @@ function Manage() {
   //       document.removeEventListener('keydown', listener);
   //     };
   //   }, []);
+
+  const handleChange = (event) => {
+    setValue(event.target.value);
+  };
 
   return (
     <div className="book">
@@ -138,6 +163,14 @@ function Manage() {
         </Breadcrumbs>
       </div>
       <div className="options">
+        <TextField
+          id="outlined-basic"
+          className="options__name"
+          label="Bureau Name"
+          variant="outlined"
+          value={value}
+          onChange={handleChange}
+        />
         <Button onClick={handleSave}>
           <SaveAltIcon />
           &#160; Save

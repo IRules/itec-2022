@@ -17,7 +17,6 @@ function Dot(props) {
   const handleClose = () => {
     setAnchor(null);
   };
-  const [startEnd, setEndDate] = React.useState(null);
 
   const handleBook = (e) => {
     e.preventDefault();
