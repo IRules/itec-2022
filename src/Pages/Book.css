@@ -1,15 +1,16 @@
 .book {
     height: 94vh;
-    width: 100vw;
+    width: 98vw;
     background-color: #f4f4ef;
     display: flex;
     align-items: center;
-    gap: 30%;
+    gap: 20%;
+    overflow: hidden;
 }
 
 .book__nav {
     height: 100%;
-    width: 11vw;
+    width: 10vw;
     background-color: aliceblue;
     display: block;
 }
@@ -32,7 +33,7 @@
 .book__map {
     display: flex;
     height: 100%;
-    width: 89vw;
+    width: 87vw;
     align-items: center;
     justify-content: center;
 }

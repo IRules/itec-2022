@@ -1,4 +1,11 @@
-import { Button, Menu, MenuItem } from '@mui/material';
+import {
+  Breadcrumbs,
+  Button,
+  Link,
+  Menu,
+  MenuItem,
+  Typography,
+} from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import './Book.css';
 import ApartmentIcon from '@mui/icons-material/Apartment';
@@ -144,6 +151,17 @@ function Book() {
         >
           {spaces}
         </Menu>
+      </div>
+      <div className="breadcrumbs">
+        <Breadcrumbs aria-label="breadcrumb">
+          <Link underline="hover" color="inherit">
+            Location: {office}
+          </Link>
+          <Link underline="hover" color="inherit">
+            Floor: {floor}
+          </Link>
+          <Typography color="text.primary">Bureaus</Typography>
+        </Breadcrumbs>
       </div>
       <div className="book__map">
         <div className="book__mapBureaus">
